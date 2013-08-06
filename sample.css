@@ -447,17 +447,18 @@ ul#backtotop li.button a {
 /*js/jquery*/
 
 #file_01,#mask_file_01{
-  display:none;
+  display:  none;
 }
 .file_mask span{
   display:block;
-  background-image:url(images/choosebutton.png);
-  background-size: 100%;
-  background-position:left top;
-  height:30px;
-  width:140px;
-  cursor:pointer;
+  background-image:     url(images/choosebutton.png);
+  background-size:      100%;
+  background-position:  left top;
+  border-radius:        3px;
+  height:               30px;
+  width:                140px;
+  cursor:               pointer;
 }
 .file_mask span:hover{
-  background-position:left bottom;
+  background-position:  left bottom;
 }

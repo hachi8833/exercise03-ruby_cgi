@@ -139,6 +139,11 @@ section#form {
   margin-top:       -10px;
 }
 
+#fileicon {
+margin-right: 20px;
+margin-top: 5px;
+}
+
 #formleft { width: 650px; }
 
 #printright { width: 260px; }
@@ -437,4 +442,22 @@ ul#backtotop li.button a {
   font-size:     50%;
   padding-left:  30px;
   padding-top:   20px;
+}
+
+/*js/jquery*/
+
+#file_01,#mask_file_01{
+  display:none;
+}
+.file_mask span{
+  display:block;
+  background-image:url(images/choosebutton.png);
+  background-size: 100%;
+  background-position:left top;
+  height:30px;
+  width:140px;
+  cursor:pointer;
+}
+.file_mask span:hover{
+  background-position:left bottom;
 }

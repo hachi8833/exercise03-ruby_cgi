@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*
 
 input = ENV["QUERY_STRING"]
-querylength = ENV["CONTENT_LENGTH"]
+contentlength = ENV["CONTENT_LENGTH"]
 
 username, gender, description, profile = input.split('&')
 
@@ -17,6 +17,6 @@ puts "<p>#{username}</p>"
 puts "<p>#{gender}</p>"
 puts "<p>#{description}</p>"
 puts "<p>#{profile}</p>"
-puts "<p>querylength: #{querylength}</p>"
+puts "<p>contentlength: #{contentlength}</p>"
 puts "</body>\n";
 puts "</html>\n";

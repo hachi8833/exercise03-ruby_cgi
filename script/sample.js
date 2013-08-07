@@ -18,6 +18,11 @@ function check() {
     return false;
   }
   else {
-    return true;
+    if (confirm("本当に送信してよろしいですか?")) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }

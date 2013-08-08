@@ -81,29 +81,33 @@ EOM
 
   puts "<section>\n";
   puts "<div class='exterior'>\n";
-  puts "<p>I am Ruby!!!! Version: #{VERSION}</p>\n";
 
-  puts "<p>timestamp: #{timestamp}<p>"
-  puts "<p>current directory: #{Dir::pwd}<p>"
-  puts "<p>cgi_keys: #{cgi.keys}<p>"
-  puts "<p>has_keys? #{cgi.has_key?('email')}</p>"
-  puts "<p>include? #{cgi.include?('email')}</p>"
-  puts "<p>param: #{param['email']}</p>"
-  puts "<p>email: #{email}</p>"
-  puts "<p>reason: #{reason}</p>"
-  puts "<p>filename: #{filename}</p>"
-  puts "<p>value: #{filecontents}</p>"
+  puts "<div class='centering stress bigpane'>\n";
+  puts "<p>ご応募ありがとうございました。</p><p>ご連絡いたしますのでしばらくお待ち下さい。</p>\n";
+  puts "</div>\n";
 
-  puts "<p>I am Ruby!!!!</p>\n";
+#デバッグ用
+  # puts "<p>I am Ruby!!!! Version: #{VERSION}</p>\n";
+  # puts "<p>timestamp: #{timestamp}<p>"
+  # puts "<p>current directory: #{Dir::pwd}<p>"
+  # puts "<p>cgi_keys: #{cgi.keys}<p>"
+  # puts "<p>has_keys? #{cgi.has_key?('email')}</p>"
+  # puts "<p>include? #{cgi.include?('email')}</p>"
+  # puts "<p>param: #{param['email']}</p>"
+  # puts "<p>email: #{email}</p>"
+  # puts "<p>reason: #{reason}</p>"
+  # puts "<p>filename: #{filename}</p>"
+  # puts "<p>value: #{filecontents}</p>"
+  # puts "<p>I am Ruby!!!!</p>\n";
 
-  # Dir::chdir("../received")
-  # Dir::mkdir(timestamp)
-  # theProfile = []
-  # theProfile << email.to_s
-  # theProfile << reason.to_s
-  # path = timestamp + "/"
-  # File.open(path + "profile.txt", "w") {|f| f.write theProfile}
-  # File.open(path + filename, "wb") {|f| f.write filecontents.to_s}
+  Dir::chdir("../received")
+  Dir::mkdir(timestamp)
+  theProfile = []
+  theProfile << email.to_s
+  theProfile << reason.to_s
+  path = timestamp + "/"
+  File.open(path + "profile.txt", "w") {|f| f.write theProfile}
+  File.open(path + filename, "wb") {|f| f.write filecontents.to_s}
 
   puts "</div>\n";
   puts "</section>\n";

@@ -33,6 +33,7 @@ div#shell {
 .floatright { float: right; }
 .centering  { text-align: center; }
 .outer      { padding: 25px; }
+.bigpane    { padding: 150px;}
 
 /* header */
 
